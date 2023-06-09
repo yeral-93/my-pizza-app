@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 import baground from '../../assets/pizzaBackgroundLogin.jpg';
 
-export const MobileView = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 
-`;
 
 export const Background = styled.div`
   background-image: url(${baground});

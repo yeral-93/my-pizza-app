@@ -1,8 +1,14 @@
 import React from 'react'
+import Header from '../home/Header'
+import Footer from '../home/Footer'
 
 const SearchPizza = () => {
   return (
-    <div>SearchPizza</div>
+    <>
+    <Header/>
+<Footer/>
+</>
+   
   )
 }
 
