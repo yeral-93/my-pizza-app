@@ -1,5 +1,5 @@
 import React from 'react'
-import { Background, Button, Content, H1, H2, Image,  MobileView, P, Section, ARestablecer, PCuenta, ARegistrate, } from "./StyleLogin";
+import { Background, Button, Content, H1, H2, Image,  P, Section, ARestablecer, PCuenta, ARegistrate, } from "./StyleLogin";
 import icono from '../../assets/iconoPizza.png'
 import { InputText } from '../component/InputText';
 import user from '../../assets/user.svg'
@@ -9,7 +9,7 @@ import closed from '../../assets/lock-closed.svg'
 
 const Login = () => {
   return (
-    <MobileView>
+    <>
       <Background />
       <Content>
         <Section>
@@ -34,7 +34,7 @@ const Login = () => {
        
       </Content>
 
-    </MobileView>
+    </>
   )
 }
 
