@@ -10,11 +10,13 @@ position:fixed ;
 export const H2Home= styled.h2`
 font-size:35px ;
 font-weight:bold ;
-margin:0
+margin-bottom:15px ;
+
 `
 export const H4Home= styled.h4`
-color:#747373 ;
 margin:0 ;
+color:#747373 ;
+
 `;
 export const FigureHome= styled.figure`
 height:90px ;
