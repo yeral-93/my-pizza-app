@@ -20,8 +20,9 @@ import user from "../../assets/user.svg";
 import closed from "../../assets/lock-closed.svg";
 import * as Yup from "yup";
 import { useFormik } from "formik";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { get } from "../../service/apiPizza";
+import Swal from "sweetalert2";
 import { UserContext } from "../context/UserContext";
 
 
@@ -55,6 +56,8 @@ const Login = () => {
   }, []);
 
   const navigate = useNavigate();
+ 
+
 
   const formik = useFormik({
     initialValues,
@@ -67,11 +70,22 @@ const Login = () => {
         );
     
         if (userExists) {
+
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Inicio de sesion exitoso',
+            showConfirmButton: false,
+            timer: 1500
+          })
+          // Usuario válido, redirigir a la siguiente página con los datos del usuario
+          navigate("/home", { state: { user: userExists } });
           // Establecer los datos del usuario en el contexto
           setUser(userExists);
     
           // Usuario válido, redirigir a la siguiente página
           navigate("/home");
+
         } else {
           // Usuario no válido, mostrar mensaje de error
           setFieldError("user", "Usuario o contraseña incorrectos");
@@ -122,7 +136,9 @@ const Login = () => {
 
         <ARestablecer href="#">Restablecer contraseña</ARestablecer>
         <PCuenta>¿No tienes una cuenta?</PCuenta>
+        <Link to={'/newRecord'}>
         <ARegistrate href="#">Regístrate aquí</ARegistrate>
+        </Link>
       </Content>
     </>
   );

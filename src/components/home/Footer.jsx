@@ -5,13 +5,16 @@ import canasta from "../../assets/shopping-basket.svg"
 import buscar from "../../assets/search-outline.svg"
 import { useNavigate } from 'react-router-dom';
 
-const Footer = () => {
-
+const Footer = () => 
   const navegar = useNavigate()
 
+  const onClikBuscar = (id) => {
+    navegar('/searchpizza')
+  }
   const onClikHome = () => {
     navegar('/home')
   }
+
   return (
     <>
     <FooterHome>
@@ -26,7 +29,7 @@ const Footer = () => {
                 <ImageCanasta src={canasta} alt="canasta" />
             </FigureCanasta>
         </SectionCanasta>
-        <SectionBuscar>
+        <SectionBuscar onClick={onClikBuscar}>
         <FigureBuscar>
                 <ImageBuscar src={buscar} alt="buscar" />
             </FigureBuscar>
