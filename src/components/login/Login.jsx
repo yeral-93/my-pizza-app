@@ -26,6 +26,7 @@ import Swal from "sweetalert2";
 import { UserContext } from "../context/UserContext";
 
 
+
 const validationSchema = Yup.object().shape({
   user: Yup.string()
     .min(3, "El nombre de usuario debe tener mínimo 3 caracteres")
@@ -80,6 +81,8 @@ const Login = () => {
           })
           // Usuario válido, redirigir a la siguiente página con los datos del usuario
           navigate("/home", { state: { user: userExists } });
+
+
           // Establecer los datos del usuario en el contexto
           setUser(userExists);
     
