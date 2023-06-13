@@ -1,5 +1,5 @@
 import React from 'react'
-import { Background, Button, Content, H1, H2, Image,  P, Section, ARestablecer, PCuenta, ARegistrate, } from "./StyleLogin";
+import { Background, Button, Content, H1, H2, Image,  P, Section, ARestablecer, PCuenta, ARegistrate, ButtonLogin, } from "./StyleLogin";
 import icono from '../../assets/iconoPizza.png'
 import { InputText } from '../component/InputText';
 import user from '../../assets/user.svg'
@@ -26,7 +26,7 @@ const Login = () => {
           iconSrc={closed}
           placeholder={'Contraseña'}
         />
-        <Button>Iniciar sesion</Button>
+        <ButtonLogin>Iniciar sesion</ButtonLogin>
         <ARestablecer href="#">Restablecer contraseña</ARestablecer>
         <PCuenta>¿No tienes una cuenta?</PCuenta>
         <ARegistrate href="#">Registrate aqui</ARegistrate>
