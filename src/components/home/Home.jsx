@@ -1,15 +1,16 @@
 import React from 'react'
-import Header from './Header'
 import Footer from './Footer'
+import Header from './Header'
 import { DivCupon, DivCupon1, DivHome, FigureCupon, FigurePizza, FigurePizza1, H2Cupon, H2Cupon1, ImageCupon, ImagePizza, ImagePizza1, PCupon, PCupon1, PDisponible, PTodas, SectionCupon, SectionDisponible, SectionPizza, SectionPizza1, } from './StyleHome'
 import pizza from '../../assets/pizzaBackgroundLogin.jpg'
 import cupon from '../../assets/Coupon.png'
 
 
+
 export const Home = () => {
+  
   return (
     <>
-
 
       <Header />
       <DivHome>
@@ -46,8 +47,6 @@ export const Home = () => {
         </SectionPizza1>
       </DivHome>
       <Footer />
-
-
 
     </>
   )
