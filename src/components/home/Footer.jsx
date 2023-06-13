@@ -3,8 +3,15 @@ import { FigureBuscar, FigureCanasta, FigureLibro, FooterHome, ImageBuscar, Imag
 import libro from "../../assets/book-open-light.svg"
 import canasta from "../../assets/shopping-basket.svg"
 import buscar from "../../assets/search-outline.svg"
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navegar = useNavigate()
+
+  const onClikBuscar = (id) => {
+    navegar('/searchpizza')
+  }
+  
   return (
     <>
     <FooterHome>
@@ -19,7 +26,7 @@ const Footer = () => {
                 <ImageCanasta src={canasta} alt="canasta" />
             </FigureCanasta>
         </SectionCanasta>
-        <SectionBuscar>
+        <SectionBuscar onClick={onClikBuscar}>
         <FigureBuscar>
                 <ImageBuscar src={buscar} alt="buscar" />
             </FigureBuscar>

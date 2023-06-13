@@ -21,6 +21,7 @@ export const Input = styled.input`
   height:50px ;
   font-size:20px ;
   margin-top:15px ;
+  color:white;
  
 `;
 

@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import {
   Background,
-  Button,
   Content,
   H1,
   H2,
@@ -21,8 +20,9 @@ import user from "../../assets/user.svg";
 import closed from "../../assets/lock-closed.svg";
 import * as Yup from "yup";
 import { useFormik } from "formik";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { get } from "../../service/apiPizza";
+import Swal from "sweetalert2";
 
 
 const validationSchema = Yup.object().shape({
@@ -55,6 +55,8 @@ const Login = () => {
   }, []);
 
   const navigate = useNavigate();
+ 
+
 
   const formik = useFormik({
     initialValues,
@@ -67,6 +69,13 @@ const Login = () => {
         );
 
         if (userExists) {
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Inicio de sesion exitoso',
+            showConfirmButton: false,
+            timer: 1500
+          })
           // Usuario válido, redirigir a la siguiente página con los datos del usuario
           navigate("/home", { state: { user: userExists } });
         } else {
@@ -112,14 +121,16 @@ const Login = () => {
           {formik.touched.password && formik.errors.password && (
             <Message>{formik.errors.password}</Message>
           )}
-          <Button type="submit" disabled={formik.isSubmitting}>
+          <ButtonLogin type="submit" disabled={formik.isSubmitting}>
             Iniciar sesión
-          </Button>
+          </ButtonLogin>
         </form>
 
         <ARestablecer href="#">Restablecer contraseña</ARestablecer>
         <PCuenta>¿No tienes una cuenta?</PCuenta>
+        <Link to={'/newRecord'}>
         <ARegistrate href="#">Regístrate aquí</ARegistrate>
+        </Link>
       </Content>
     </>
   );

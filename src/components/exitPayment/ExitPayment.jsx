@@ -1,7 +1,14 @@
 import React from 'react'
 import { ButtonAceptar, DivExit, FigureExit, H1Exit, H4Exit, ImagenExit, SectionExit, SectionProceso } from './StyleExitPayment'
 import exit from "../../assets/imagenExit.webp"
+import { useNavigate } from 'react-router-dom'
 const ExitPayment = () => {
+
+  const navegar = useNavigate()
+
+  const onClikHome = () => {
+    navegar('/home')
+  }
   return (
     <>
     <DivExit>
@@ -18,7 +25,9 @@ const ExitPayment = () => {
         Seras notificado cuando llegue el repartidor
       </H4Exit>
       </SectionProceso>
-      <ButtonAceptar>Aceptar</ButtonAceptar>
+      <ButtonAceptar onClick={onClikHome}>
+        Aceptar
+        </ButtonAceptar>
     </DivExit>
     </>
   )

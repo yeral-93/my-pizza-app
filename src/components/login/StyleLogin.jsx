@@ -99,7 +99,7 @@ margin-top:-10px ;
 `;
 
 export const Message = styled.div`
-color: white;
+color: red;
 `
 
 

@@ -63,6 +63,7 @@ export const PCupon = styled.p`
   color: #fff;
   font-size: 18px;
   margin-bottom: -15px;
+  white-space: nowrap;
 `
 
 export const H2Cupon = styled.h2`
@@ -84,9 +85,12 @@ export const DivCupon1 = styled.div`
 `
 
 export const PCupon1 = styled.p`
+
   color: #fff;
   font-size: 18px;
   margin-bottom: -15px;
+ 
+ 
 `
 
 export const H2Cupon1 = styled.h2`
@@ -131,5 +135,44 @@ export const ImagePizza1 = styled.img`
   height:100%;
       width:100% ;
 
+`
+export const CarouselControls = styled.div`
+   display: flex;
+    gap: 15px;
+    position: absolute;
+    top: 400px;
+    left: 80px;
+`
+export const ActiveBotones = styled.div`
+ background: white;
+    border-radius: 50%;
+`
+export const Circle = styled.div`
+width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+`
+export const DivPrecio = styled.div`
+display:flex ;
+justify-content:space-between ;
+position:relative ;
+bottom:100px ;
+padding:0 15px 0 15px ;
+
+p{
+  color:white ;
+  font-size:20px ;
+  font-weight:600 ;
+}
+button {
+  height:40px ;
+  width:100px ;
+  border-radius:50px ;
+  color: white;
+  background:#fe174f ;
+  border:none ;
+  font-size:16px ;
+}
 `
 
