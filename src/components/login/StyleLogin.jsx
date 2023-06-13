@@ -20,7 +20,7 @@ display:flex ;
 justify-content:center ;
 flex-direction:column ;
  z-index: 1;
-padding:0 20px 0 20px ;
+padding:0px 20px;
 `;
 export const Section = styled.figure`
 width:120px ;
@@ -73,6 +73,8 @@ height: 60px;
 font-size:20px ;
 border-radius: 7px;
 margin-top:30px ;
+width: 350px;
+border: none;
 `;
 export const ARestablecer = styled.a`
 font-weight:bold ;
@@ -95,6 +97,10 @@ font-size:20px ;
 text-decoration:none ;
 margin-top:-10px ;
 `;
+
+export const Message = styled.div`
+color: white;
+`
 
 
 

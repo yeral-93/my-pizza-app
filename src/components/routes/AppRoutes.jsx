@@ -8,28 +8,29 @@ import DetailsPizza from "../detailsPizza/DetailsPizza";
 import PaymentPizza from "../paymentPizza/PaymentPizza";
 import ExitPayment from "../exitPayment/ExitPayment";
 import { MobileView } from "../styles/GlobalStyles";
-
+import { CartProvider } from "../context/CartContext";
 
 const AppRoutes = () => {
   return (
     <>
+    <CartProvider>
       <MobileView>
-        
-          <BrowserRouter>
-            <Routes>
-              <Route path={"/"} index element={<Home />} />
-              <Route path={"login"} element={<Login />} />
-              <Route path={"searchpizza"} element={<SearchPizza />} />
-              <Route path={"detailspizza"} element={<DetailsPizza />} />
-              <Route path={"paymentpizza"} element={<PaymentPizza />} />
-              <Route path={"exitpayment"} element={<ExitPayment />} />
-              <Route path={"*"} element={<NoFound />} />
-            </Routes>
-          </BrowserRouter>
-      
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/searchpizza" element={<SearchPizza />} />
+            <Route path="/detailspizza/:id" element={<DetailsPizza />} />
+            <Route path="/paymentpizza" element={<PaymentPizza />} />
+            <Route path="/exitpayment" element={<ExitPayment />} />
+            <Route path="*" element={<NoFound />} />
+          </Routes>
+        </BrowserRouter>
       </MobileView>
+      </CartProvider>
     </>
   );
 };
 
 export default AppRoutes;
+

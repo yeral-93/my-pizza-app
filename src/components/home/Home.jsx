@@ -1,13 +1,16 @@
 import React from 'react'
-import Header from './Header'
 import Footer from './Footer'
+import Header from './Header'
+
+
 
 
 
 export const Home = () => {
+  
   return (
     <>
-    <Header/>
+    <Header />
     <Footer/>
     </>
   )
