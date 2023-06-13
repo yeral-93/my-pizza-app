@@ -24,7 +24,7 @@ import { CartContext } from "../context/CartContext";
 
 const DetailsPizza = () => {
   const { addToCart } = useContext(CartContext);
-  const navigate = useNavigate(); // Utiliza useNavigate en lugar de useHistory
+  const navigate = useNavigate(); 
   const { id } = useParams();
   const [pizza, setPizza] = useState(null);
   const [count, setCount] = useState(0);
@@ -47,7 +47,7 @@ const DetailsPizza = () => {
       cantidad: count,
     });
 
-    // Redireccionar a la página de pago
+  
     navigate("/paymentpizza", {
       state: {
         cantidad: count,
@@ -76,7 +76,7 @@ const DetailsPizza = () => {
   return (
     <ContainerDetails>
       <IconArrow>
-        <button>
+      <button onClick={() => navigate(-1)}>
           <img src={arrow} alt="arrow" />
         </button>
         <h3>Todas las pizzas</h3>

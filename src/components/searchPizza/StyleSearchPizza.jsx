@@ -78,4 +78,18 @@ width: 375px;
   padding:0 ;
 `
 
- 
+export const ImgPizza = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 40px;
+img{
+  width: 100px;
+  color: gray;
+}
+
+h3{
+  color: gray;
+}
+`
