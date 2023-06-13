@@ -22,11 +22,9 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import { get } from "../../service/apiPizza";
-<<<<<<< HEAD
 import Swal from "sweetalert2";
-=======
 import { UserContext } from "../context/UserContext";
->>>>>>> 4dbe8ef9984cd1aab8771a8b7f33be1728a15a45
+
 
 
 const validationSchema = Yup.object().shape({
@@ -73,7 +71,7 @@ const Login = () => {
         );
     
         if (userExists) {
-<<<<<<< HEAD
+
           Swal.fire({
             position: 'center',
             icon: 'success',
@@ -83,13 +81,14 @@ const Login = () => {
           })
           // Usuario válido, redirigir a la siguiente página con los datos del usuario
           navigate("/home", { state: { user: userExists } });
-=======
+
+
           // Establecer los datos del usuario en el contexto
           setUser(userExists);
     
           // Usuario válido, redirigir a la siguiente página
           navigate("/home");
->>>>>>> 4dbe8ef9984cd1aab8771a8b7f33be1728a15a45
+
         } else {
           // Usuario no válido, mostrar mensaje de error
           setFieldError("user", "Usuario o contraseña incorrectos");

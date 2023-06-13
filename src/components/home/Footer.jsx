@@ -9,10 +9,12 @@ const Footer = () => {
   const navegar = useNavigate()
 
   const onClikBuscar = (id) => {
-    navegar('/searchpizza')}
-    const onClikHome = () => {
-      navegar('/home')
-    }
+    navegar('/searchpizza')
+  }
+  const onClikHome = () => {
+    navegar('/home')
+  }
+
   return (
     <>
     <FooterHome>
