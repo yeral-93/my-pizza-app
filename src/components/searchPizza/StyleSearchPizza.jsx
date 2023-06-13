@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const PizzaSearch = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 100px 20px 30px 20px;
+  padding: 150px 20px 30px 20px;
 `;
 
 export const InputSearch = styled.div`

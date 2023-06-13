@@ -52,7 +52,7 @@ const PaymentPizza = () => {
     onSubmit: async (values, { setSubmitting }) => {
       try {
         // Aquí enviamos los datos al endpoint JSON utilizando axios
-        await axios.post(' https://pizza-frontend-fhv7.onrender.com/Cash', values);
+        await axios.post(' http://localhost:3000/Cash', values);
 
         // Redirigimos al usuario a la página de confirmación
         navigate('/exitpayment');
