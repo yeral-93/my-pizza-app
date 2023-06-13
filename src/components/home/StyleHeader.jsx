@@ -28,4 +28,5 @@ height:100% ;
 width:100% ;
 border-radius: 50%;
 margin:0 ;
+object-fit: cover;
 `

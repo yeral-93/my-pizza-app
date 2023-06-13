@@ -9,13 +9,14 @@ const Footer = () => {
   const navegar = useNavigate()
 
   const onClikBuscar = (id) => {
-    navegar('/searchpizza')
-  }
-  
+    navegar('/searchpizza')}
+    const onClikHome = () => {
+      navegar('/home')
+    }
   return (
     <>
     <FooterHome>
-        <SectionHome>
+        <SectionHome onClick={onClikHome}>
         <FigureLibro>
                 <ImageLibro src={libro} alt="libro" />
             </FigureLibro>

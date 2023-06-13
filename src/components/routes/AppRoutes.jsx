@@ -7,13 +7,15 @@ import SearchPizza from "../searchPizza/SearchPizza";
 import DetailsPizza from "../detailsPizza/DetailsPizza";
 import PaymentPizza from "../paymentPizza/PaymentPizza";
 import ExitPayment from "../exitPayment/ExitPayment";
-import NewRecord from "../newRecord/NewRecord"
 import { MobileView } from "../styles/GlobalStyles";
 import { CartProvider } from "../context/CartContext";
+import { UserProvider } from "../context/UserContext";
+import NewRecord from '../newRecord/NewRecord'
 
 const AppRoutes = () => {
   return (
     <>
+    <UserProvider>
     <CartProvider>
       <MobileView>
         <BrowserRouter>
@@ -24,15 +26,15 @@ const AppRoutes = () => {
             <Route path="/detailspizza/:id" element={<DetailsPizza />} />
             <Route path="/paymentpizza" element={<PaymentPizza />} />
             <Route path="/exitpayment" element={<ExitPayment />} />
-            <Route path="/newRecord" element={<NewRecord />} />
+            <Route path="/newRecord" element={<NewRecord/>} />
             <Route path="*" element={<NoFound />} />
           </Routes>
         </BrowserRouter>
       </MobileView>
       </CartProvider>
+      </UserProvider>
     </>
   );
 };
 
 export default AppRoutes;
-

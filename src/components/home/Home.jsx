@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Footer from './Footer'
 import Header from './Header'
-import { ActiveBotones, CarouselControls, Circle, DivCupon, DivCupon1, DivHome, FigureCupon, FigurePizza, FigurePizza1, H2Cupon, H2Cupon1, ImageCupon, ImagePizza, ImagePizza1, PCupon, PCupon1, PDisponible, PTodas, SectionCupon, SectionDisponible, SectionPizza, SectionPizza1, } from './StyleHome'
+import { ActiveBotones, CarouselControls, Circle, DivCupon, DivCupon1, DivHome, FigureCupon,  H2Cupon, H2Cupon1, ImageCupon,  PCupon, PCupon1, PDisponible, PTodas, SectionCupon, SectionDisponible,  } from './StyleHome'
 
 import cupon from '../../assets/Coupon.png'
 import axios from 'axios';
