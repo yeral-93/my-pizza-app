@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import {
   Background,
@@ -12,6 +13,7 @@ import {
   PCuenta,
   ARegistrate,
   Message,
+  ButtonLogin
 } from "./StyleLogin";
 import icono from "../../assets/iconoPizza.png";
 import { InputText } from "../component/InputText";
@@ -21,6 +23,7 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import { get } from "../../service/apiPizza";
+
 
 const validationSchema = Yup.object().shape({
   user: Yup.string()
@@ -113,6 +116,7 @@ const Login = () => {
             Iniciar sesión
           </Button>
         </form>
+
         <ARestablecer href="#">Restablecer contraseña</ARestablecer>
         <PCuenta>¿No tienes una cuenta?</PCuenta>
         <ARegistrate href="#">Regístrate aquí</ARegistrate>

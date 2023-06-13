@@ -68,7 +68,7 @@ export const Input = styled.input`
   outline: none;
 
 `;
-export const Button = styled.button`
+export const ButtonLogin = styled.button`
 height: 60px;
 font-size:20px ;
 border-radius: 7px;

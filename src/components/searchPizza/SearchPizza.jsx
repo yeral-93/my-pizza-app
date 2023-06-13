@@ -63,4 +63,3 @@ const SearchPizza = () => {
 };
 
 export default SearchPizza;
-
