@@ -5,10 +5,10 @@ import Footer from '../home/Footer'
 const SearchPizza = () => {
   return (
     <>
-    <Header/>
-<Footer/>
-</>
-   
+      <Header />
+      <Footer />
+    </>
+
   )
 }
 

@@ -8,6 +8,7 @@ position: fixed;
   margin:0 ;
   background:#fff ;
   width:100% ;
+  height:55px ;
 `;
 export const SectionHome= styled.section`
 display:flex ;
