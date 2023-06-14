@@ -21,10 +21,11 @@ import {
 } from "./StyleDetailsPizza";
 import arrow from "../../assets/chevron_left_FILL0_wght400_GRAD0_opsz48.png";
 import { CartContext } from "../context/CartContext";
+import starWhite from "../../assets/Daco_4832425.png";
 
 const DetailsPizza = () => {
   const { addToCart } = useContext(CartContext);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const { id } = useParams();
   const [pizza, setPizza] = useState(null);
   const [count, setCount] = useState(0);
@@ -47,7 +48,6 @@ const DetailsPizza = () => {
       cantidad: count,
     });
 
-  
     navigate("/paymentpizza", {
       state: {
         cantidad: count,
@@ -76,7 +76,7 @@ const DetailsPizza = () => {
   return (
     <ContainerDetails>
       <IconArrow>
-      <button onClick={() => navigate(-1)}>
+        <button onClick={() => navigate(-1)}>
           <img src={arrow} alt="arrow" />
         </button>
         <h3>Todas las pizzas</h3>
@@ -90,7 +90,10 @@ const DetailsPizza = () => {
         </div>
         <Price>
           <H3Price>$ {precio} COP</H3Price>
-          <H3View>445 review</H3View>
+          <H3View>
+            <img src={starWhite} alt="" />
+            445 review
+          </H3View>
         </Price>
         <div>
           <h4>Descripción</h4>
@@ -133,4 +136,3 @@ const DetailsPizza = () => {
 };
 
 export default DetailsPizza;
-

@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useContext } from "react";
 import {
   Background,
@@ -12,7 +11,7 @@ import {
   PCuenta,
   ARegistrate,
   Message,
-  ButtonLogin
+  ButtonLogin,
 } from "./StyleLogin";
 import icono from "../../assets/iconoPizza.png";
 import { InputText } from "../component/InputText";
@@ -24,8 +23,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { get } from "../../service/apiPizza";
 import Swal from "sweetalert2";
 import { UserContext } from "../context/UserContext";
-
-
 
 const validationSchema = Yup.object().shape({
   user: Yup.string()
@@ -46,7 +43,7 @@ const Login = () => {
   const [links, setLinks] = useState([]);
   const { setUser } = useContext(UserContext);
 
-   const getUsers = async () => {
+  const getUsers = async () => {
     const response = await get("users");
     console.log(response);
     setLinks(response);
@@ -57,8 +54,6 @@ const Login = () => {
   }, []);
 
   const navigate = useNavigate();
- 
-
 
   const formik = useFormik({
     initialValues,
@@ -67,28 +62,26 @@ const Login = () => {
       try {
         // Validar si el usuario y la contraseña existen en la data
         const userExists = links.find(
-          (link) => link.user === values.user && link.password === values.password
+          (link) =>
+            link.user === values.user && link.password === values.password
         );
-    
-        if (userExists) {
 
+        if (userExists) {
           Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Inicio de sesion exitoso',
+            position: "center",
+            icon: "success",
+            title: "Inicio de sesion exitoso",
             showConfirmButton: false,
-            timer: 1500
-          })
+            timer: 1500,
+          });
           // Usuario válido, redirigir a la siguiente página con los datos del usuario
           navigate("/home", { state: { user: userExists } });
 
-
           // Establecer los datos del usuario en el contexto
           setUser(userExists);
-    
+
           // Usuario válido, redirigir a la siguiente página
           navigate("/home");
-
         } else {
           // Usuario no válido, mostrar mensaje de error
           setFieldError("user", "Usuario o contraseña incorrectos");
@@ -96,7 +89,7 @@ const Login = () => {
       } catch (error) {
         console.error(error);
       }
-    
+
       setSubmitting(false);
     },
   });
@@ -139,8 +132,8 @@ const Login = () => {
 
         <ARestablecer href="#">Restablecer contraseña</ARestablecer>
         <PCuenta>¿No tienes una cuenta?</PCuenta>
-        <Link to={'/newRecord'}>
-        <ARegistrate href="#">Regístrate aquí</ARegistrate>
+        <Link to={"/newRecord"}>
+          <ARegistrate href="#">Regístrate aquí</ARegistrate>
         </Link>
       </Content>
     </>
@@ -148,4 +141,3 @@ const Login = () => {
 };
 
 export default Login;
-
