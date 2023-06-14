@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 export const InputContainer = styled.div`
   display: flex;
@@ -18,20 +18,17 @@ export const Input = styled.input`
   border: none;
   background: transparent;
   outline: none;
-  height:50px ;
-  font-size:20px ;
-  margin-top:15px ;
-  color:white;
- 
+  height: 50px;
+  font-size: 20px;
+  margin-top: 15px;
+  color: white;
 `;
 
 export const InputText = ({ iconSrc, ...props }) => {
   return (
     <InputContainer>
-    <Icon src={iconSrc} alt="Icon" />
-    <Input {...props} />
-  </InputContainer>
-  )
-}
-
-
+      <Icon src={iconSrc} alt="Icon" />
+      <Input {...props} />
+    </InputContainer>
+  );
+};

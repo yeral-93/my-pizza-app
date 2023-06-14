@@ -13,8 +13,8 @@ import {
   Price,
 } from "./StylePaymentPizza";
 import * as Yup from "yup";
-import { useFormik } from 'formik';
-import axios from 'axios';
+import { useFormik } from "formik";
+import axios from "axios";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -46,16 +46,21 @@ const initialValues = {
 
 const PaymentPizza = () => {
   const navigate = useNavigate();
+
+  const onClikSearch = () => {
+    navigate("/home");
+  };
+
   const formik = useFormik({
     initialValues,
     validationSchema,
     onSubmit: async (values, { setSubmitting }) => {
       try {
         // Aquí enviamos los datos al endpoint JSON utilizando axios
-        await axios.post(' http://localhost:3000/Cash', values);
+        await axios.post(" http://localhost:3000/Cash", values);
 
         // Redirigimos al usuario a la página de confirmación
-        navigate('/exitpayment');
+        navigate("/exitpayment");
       } catch (error) {
         console.error(error);
       } finally {
@@ -70,7 +75,7 @@ const PaymentPizza = () => {
   return (
     <ContainerPayment>
       <CartShopping>
-        <button>
+        <button onClick={onClikSearch}>
           <img src={flecha} alt="" />
         </button>
         <h3>Carrito de compras</h3>
@@ -91,33 +96,56 @@ const PaymentPizza = () => {
         <h3>Información de pago</h3>
         <form onSubmit={formik.handleSubmit}>
           <label htmlFor="">Nombre completo</label>
-          <input type="text" name="" id="" placeholder="Ingresa tu nombre" {...formik.getFieldProps("name")} />
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Ingresa tu nombre"
+            {...formik.getFieldProps("name")}
+          />
           {formik.touched.name && formik.errors.name && (
             <div>{formik.errors.name}</div>
           )}
           <label htmlFor="">Número de Tarjeta de Crédito</label>
-          <input type="text" placeholder="1234 1234 1234 1234" {...formik.getFieldProps("cardNumber")} />
+          <input
+            type="text"
+            placeholder="1234 1234 1234 1234"
+            {...formik.getFieldProps("cardNumber")}
+          />
           {formik.touched.cardNumber && formik.errors.cardNumber && (
             <div>{formik.errors.cardNumber}</div>
           )}
           <Date>
             <div>
               <label htmlFor="">Fecha de vencimiento</label>
-              <InputD type="text" placeholder="12/29" {...formik.getFieldProps("expirationDate")} />
-              {formik.touched.expirationDate && formik.errors.expirationDate && (
-                <div>{formik.errors.expirationDate}</div>
-              )}
+              <InputD
+                type="text"
+                placeholder="12/29"
+                {...formik.getFieldProps("expirationDate")}
+              />
+              {formik.touched.expirationDate &&
+                formik.errors.expirationDate && (
+                  <div>{formik.errors.expirationDate}</div>
+                )}
             </div>
             <div>
               <label htmlFor="">CVV</label>
-              <InputD type="text" placeholder="333" {...formik.getFieldProps("cvv")} />
+              <InputD
+                type="text"
+                placeholder="333"
+                {...formik.getFieldProps("cvv")}
+              />
               {formik.touched.cvv && formik.errors.cvv && (
                 <div>{formik.errors.cvv}</div>
               )}
             </div>
           </Date>
           <label htmlFor="">Dirección</label>
-          <input type="text" placeholder="Av.morelos #123" {...formik.getFieldProps("direction")} />
+          <input
+            type="text"
+            placeholder="Av.morelos #123"
+            {...formik.getFieldProps("direction")}
+          />
           {formik.touched.direction && formik.errors.direction && (
             <div>{formik.errors.direction}</div>
           )}
@@ -129,4 +157,3 @@ const PaymentPizza = () => {
 };
 
 export default PaymentPizza;
-
