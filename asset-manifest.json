@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.js": "/my-pizza-app/static/js/main.3324d6bf.js",
+    "static/media/pizzaBackgroundLogin.jpg": "/my-pizza-app/static/media/pizzaBackgroundLogin.a6df53f3e5f7272e2af1.jpg",
+    "static/media/Daco_4832425.png": "/my-pizza-app/static/media/Daco_4832425.c9fcce84523043f6d073.png",
+    "static/media/avatar2.png": "/my-pizza-app/static/media/avatar2.4a4d8e3d7a2dcf84596a.png",
+    "static/media/iconoPizza.png": "/my-pizza-app/static/media/iconoPizza.57c70598681fe3d6215c.png",
+    "static/media/iconCart.png": "/my-pizza-app/static/media/iconCart.21a6bed90212441a237f.png",
+    "static/media/imagenExit.webp": "/my-pizza-app/static/media/imagenExit.6f24ce93f45f4247d6c1.webp",
+    "static/media/coupon2.png": "/my-pizza-app/static/media/coupon2.4859e95e3ca74296db51.png",
+    "static/media/photo.webp": "/my-pizza-app/static/media/photo.6a100d0ce1da3423648a.webp",
+    "static/media/shopping-basket.svg": "/my-pizza-app/static/media/shopping-basket.8e4485c85fdbbfa17f6999cefe82adc9.svg",
+    "index.html": "/my-pizza-app/index.html",
+    "static/media/book-open-light.svg": "/my-pizza-app/static/media/book-open-light.2e6b3629424ca4f147cf5bf2161917aa.svg",
+    "static/media/lock-closed.svg": "/my-pizza-app/static/media/lock-closed.a20da3fbe6fe0bc4ce7284beaa96716a.svg",
+    "static/media/search-outline.svg": "/my-pizza-app/static/media/search-outline.ae530494b00d200b7e625af3e59607ea.svg",
+    "static/media/user.svg": "/my-pizza-app/static/media/user.f8ccc2ba72e4d7bbf4c7680e663928eb.svg",
+    "main.3324d6bf.js.map": "/my-pizza-app/static/js/main.3324d6bf.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.3324d6bf.js"
+  ]
+}
