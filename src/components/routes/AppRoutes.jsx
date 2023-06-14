@@ -20,7 +20,7 @@ const AppRoutes = () => {
           <MobileView>
             <BrowserRouter>
               <Routes>
-                <Route path="/" element={<Login />} />
+                <Route path="/my-pizza-app" element={<Login />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/searchpizza" element={<SearchPizza />} />
                 <Route path="/detailspizza/:id" element={<DetailsPizza />} />
