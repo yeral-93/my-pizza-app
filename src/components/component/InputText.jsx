@@ -5,12 +5,13 @@ export const InputContainer = styled.div`
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ccc;
+  margin-bottom:10px ;
 `;
 
 export const Icon = styled.img`
   width: 30px;
   height: 30px;
-  margin-right: 10px;
+  margin-left: 50px;
 `;
 
 export const Input = styled.input`
